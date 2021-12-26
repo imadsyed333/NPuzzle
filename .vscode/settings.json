@@ -1,5 +1,9 @@
 {
     "java.project.sourcePaths": [
         "src"
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/imadsyed/javafx-sdk-17.0.0.1/lib/**/*.jar"
     ]
 }
