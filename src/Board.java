@@ -25,6 +25,10 @@ public class Board {
         this.board = toArray(nums, this.size);
     }
 
+    public Cell[][] getBoard() {
+        return this.board;
+    }
+
     public int getNumInversions(List<Integer> nums) {
         int numInversions = 0;
         for (int i = 0; i < nums.size() - 1; i++) {

@@ -1,12 +1,17 @@
-public class Cell {
+import javafx.scene.control.Button;
+
+public class Cell extends Button {
     private int num;
     private int row;
     private int col;
 
     public Cell (int num, int row, int col) {
-        this.num = num;
+        super();
+        setNum(num);
         this.row = row;
         this.col = col;
+        this.setId(Integer.toString(row) + ", "  + Integer.toString(col));
+        this.setText(toString());
     }
 
     public int getRow() {
@@ -29,6 +34,12 @@ public class Cell {
     }
 
     public void setNum(int num) {
+        if (num == 0) {
+            setDisable(true);
+        } else {
+            setDisable(false);
+        }
         this.num = num;
+        this.setText(toString());
     }
 }

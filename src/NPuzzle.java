@@ -40,9 +40,8 @@ public class NPuzzle {
         }
         this.board.move(scanner.nextInt());
     }
-    public static void main(String[] args) throws Exception {
-        System.out.println("Welcome to N-Puzzle!");
-        NPuzzle puzzle = new NPuzzle();
-        puzzle.runPuzzle();
+
+    public Board getBoard() {
+        return this.board;
     }
 }
