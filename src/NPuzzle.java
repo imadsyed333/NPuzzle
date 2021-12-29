@@ -24,6 +24,7 @@ public class NPuzzle {
         while (!isPuzzleSolved()) {
             getMove();
         }
+        System.out.println(this.board);
         System.out.println("You solved it!");
     }
 
