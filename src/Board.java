@@ -23,6 +23,7 @@ public class Board {
         nums.add(0);
         System.out.println(nums);
         this.board = toArray(nums, this.size);
+        System.out.println(this);
     }
 
     public Cell[][] getBoard() {
@@ -74,12 +75,11 @@ public class Board {
         return nums.equals(copyNums);
     }
 
-    public void move(int num) {
-        Cell cell = getCellWithNum(num);
-        if (canMove(cell)) {
+    public void move(Cell tile) {
+        if (canMove(tile)) {
             Cell nullCell = getCellWithNum(0);
-            nullCell.setNum(cell.getNum());
-            cell.setNum(0);            
+            nullCell.setNum(tile.getNum());
+            tile.setNum(0);         
         }
     }
 
