@@ -20,25 +20,12 @@ public class NPuzzle {
         return scanner.nextInt();
     }
 
-    public void runPuzzle() {
-        while (!isPuzzleSolved()) {
-            getMove();
-        }
-        System.out.println("You solved it!");
-    }
-
     public boolean isPuzzleSolved() {
         return this.board.isBoardSolved();
     }
 
-    public void getMove() {
-        System.out.println(this.board);
-        System.out.println("Enter the number which you would like to move:");
-        while (!this.scanner.hasNextInt()) {
-            System.out.println("Enter a positive integer that is on the board:");
-            scanner.next();
-        }
-        this.board.move(scanner.nextInt());
+    public void moveTile(Cell tile) {
+        this.board.move(tile);
     }
 
     public Board getBoard() {
