@@ -6,12 +6,11 @@ public class Cell extends Button {
     private int col;
 
     public Cell (int num, int row, int col) {
-        super();
+        super("");
         setNum(num);
         this.row = row;
         this.col = col;
         this.setId(Integer.toString(row) + ", "  + Integer.toString(col));
-        this.setText(toString());
     }
 
     public int getRow() {
@@ -34,12 +33,12 @@ public class Cell extends Button {
     }
 
     public void setNum(int num) {
+        this.num = num;
         if (num == 0) {
             setDisable(true);
         } else {
             setDisable(false);
         }
-        this.num = num;
         this.setText(toString());
     }
 }
