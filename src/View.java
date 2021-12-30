@@ -1,5 +1,4 @@
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 public class View {
@@ -15,8 +14,12 @@ public class View {
 
     private void initUI() {
         this.boardPanel = new BoardPanel(this, this.model.getBoard());
-        Scene scene = new Scene(this.boardPanel, 800, 800);
+        Scene scene = new Scene(this.boardPanel);
         this.stage.setScene(scene);
         this.stage.show();
+    }
+
+    protected void runMove(Cell tile) {
+        this.model.moveTile(tile);
     }
 }
