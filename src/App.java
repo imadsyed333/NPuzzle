@@ -8,8 +8,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         stage.setTitle("NPuzzle");
-        stage.setMinHeight(900);
-        stage.setMinWidth(600);
+        stage.setResizable(false);
 
         this.model = new NPuzzle();
         this.view = new View(model, stage);
