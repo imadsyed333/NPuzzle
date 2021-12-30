@@ -15,7 +15,8 @@ public class BoardPanel extends GridPane implements EventHandler<ActionEvent> {
     protected void generateBoard() {
         for (Cell[] row : this.board.getBoard()) {
             for (Cell cell : row) {
-                this.add(cell, cell.getRow(), cell.getCol());
+                cell.setOnAction(this);
+                this.add(cell, cell.getCol(), cell.getRow());
             }
         }
     }
@@ -23,6 +24,6 @@ public class BoardPanel extends GridPane implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent event) {
         Cell tile = (Cell) event.getSource();
-        this.board.move(tile.getNum());
+        this.view.runMove(tile);
     }
 }
