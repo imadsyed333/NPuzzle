@@ -9,6 +9,8 @@ public class BoardPanel extends GridPane implements EventHandler<ActionEvent> {
     public BoardPanel(View view, Board board) {
         this.view = view;
         this.board = board;
+        this.setHgap(10);
+        this.setVgap(10);
         generateBoard();
     }
 
