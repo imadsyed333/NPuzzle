@@ -11,6 +11,8 @@ public class Cell extends Button {
         this.row = row;
         this.col = col;
         this.setId(Integer.toString(row) + ", "  + Integer.toString(col));
+        setScaleShape(true);
+        setScale(5);
     }
 
     public int getRow() {
@@ -30,6 +32,12 @@ public class Cell extends Button {
             return " ";
         }
         return Integer.toString(this.num);
+    }
+
+    public void setScale(int scale) {
+        setScaleX(scale);
+        setScaleY(scale);
+        // setScaleZ(scale);
     }
 
     public void setNum(int num) {
