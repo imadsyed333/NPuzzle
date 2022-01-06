@@ -4,6 +4,7 @@ public class Cell extends Button {
     private int num;
     private int row;
     private int col;
+    private int size = 100;
 
     public Cell (int num, int row, int col) {
         super("");
@@ -11,8 +12,7 @@ public class Cell extends Button {
         this.row = row;
         this.col = col;
         this.setId(Integer.toString(row) + ", "  + Integer.toString(col));
-        setScaleShape(true);
-        setScale(5);
+        setSize();
     }
 
     public int getRow() {
@@ -34,10 +34,9 @@ public class Cell extends Button {
         return Integer.toString(this.num);
     }
 
-    public void setScale(int scale) {
-        setScaleX(scale);
-        setScaleY(scale);
-        // setScaleZ(scale);
+    public void setSize() {
+        setMinSize(size, size);
+        setPrefSize(size, size);
     }
 
     public void setNum(int num) {
